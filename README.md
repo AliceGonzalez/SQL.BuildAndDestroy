@@ -1,50 +1,56 @@
-# Build and Destroy: Introductory SQL Queries
+**# Build and Destroy: Introductory SQL Queries
 
 Given the scenarios, add the the directed queries to the "answers" directory's files.
 
 ## Creating databases
-
-Write the correct SQL statement to create a new database called **myNewDB**.
-
+Write** the correct SQL statement to create a new database called **myNewDB**.
 *(Add your query to the file exercise1.sql)*
+CREATE DATABASE myNewDB;
 
 ## Deleting databases
-
 Write the correct SQL statement to delete a database named **myNewDB**.
-
 *(Add your query to the file exercise2.sql)*
+DROP DATABASE myBewDB;
 
 ## Creating tables
-
 Write the correct SQL statement to create a new table called **Users**, with an int field called **UserID**, and the following varchar fields of size 255: **LastName, FirstName, Address, City**
-
 *(Add your query to the file exercise3.sql)*
+CREATE TABLE Users(
+User ID INT,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255),
+);
 
 ## Deleting tables
-
 Write the correct SQL statement to delete a table called **Users**.
-
 *(Add your query to the file exercise4.sql)*
-
+DROP TABLE Users;
 
 Use the **TRUNCATE** statement to delete all data inside the **Users** table.
-
 *(Add your query to the file exercise5.sql)*
+TRUNCATE TABLE Users;
 
 ## Altering tables
-
 Add a column of type **DATE** called **Birthday** to the **Users** table.
-
 *(Add your query to the file exercise6.sql)*
+ALTER TABLE Users 
+ADD Birthdate DATE;
 
 Delete the column **Birthday** from the **Users** table.
-
 *(Add your query to the file exercise7.sql)*
-  
+ALTER TABLE Users
+DROP COLUMN Birthday;
 
 ## Inserting records
-
 Insert a new record in the **Students** table.
+ALTER TABLE Students
+ADD StudentName,
+Address,
+City,
+PostalCode,
+Country;
 
 **Schema:**
  
@@ -57,7 +63,8 @@ Country
 ```
 
 **Record's info to enter:**
-
+INSERT INTO Students
+VALUES(Jane Doe, 57 Union St, Glasgow Scotland, G13RB);
 ```
 Jane Doe
 57 Union St
